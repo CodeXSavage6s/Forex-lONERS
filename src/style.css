@@ -1,0 +1,256 @@
+body {
+    background-attachment: fixed;
+    color: white;
+    min-height: 100vh;
+    background:
+    radial-gradient(
+      circle farthest-side at -40% 40%,
+      #ff9600,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle farthest-side at 300% 70%,
+      #ff9600, transparent 80%
+    ),
+        radial-gradient(circle at left bottom, #ff9600, transparent 10%),
+    linear-gradient(
+      180deg,
+      black,
+      #210505
+
+    );
+    background-attachment: fixed;
+    background-size: 150%;
+    animation: gradientMove 10s ease infinite;
+    font-family: ;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+*{box-sizing: border-box; border-radius: 2vh;}
+header {
+  position: relative;
+  display: flex;
+  backdrop-filter: blur(2vh);
+}
+#logo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 10vh;
+  max-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vh;
+  padding: 1vh;
+  font-size: clamp(2rem, 5vh, 5rem);
+  background: black;
+  border-radius: 2vh;
+  overflow: hidden;
+  font-family: KingsCustom;
+}
+
+#logo::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -40%;
+  
+  width: 40%;
+  height: 0.8vh;
+  
+  background: linear-gradient(90deg,
+      transparent 0%,
+      #ff9600 50%,
+      transparent 100%);
+  
+  animation: borderSlide 3s ease-in-out infinite;
+}
+
+@keyframes borderSlide {
+  0% {
+    transform: translateX(0);
+  }
+  
+  50% {
+    transform: translateX(310%);
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}
+#logo img {
+    height: 100%;
+    border-radius: 50%;
+}
+#brief {
+  position: relative; 
+  margin-top: 12vh;
+  width: 100%;
+  height: 30vh;
+  padding: 2vh;
+  overflow: hidden; 
+  background: #111;
+}
+
+#brief::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(
+    transparent,
+    #ff9600,
+    transparent 30%
+  );
+  animation: rotate 4s linear infinite;
+  z-index: 1;
+}
+
+
+#brief::after {
+  content: "";
+  position: absolute;
+  inset: 0.7vh;
+  background: linear-gradient(135deg, #161618bd, black);
+  z-index: 2;
+  border-radius: 1.5vh;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#brief > * {
+  position: relative;
+  z-index: 3;
+}
+
+#brief span:nth-child(1) {
+    position: absolute;
+    align-self: flex-start;
+    margin: auto;
+    width: 50%;
+    font-size: clamp(1rem, 3vh, 3rem);
+    font-weight: 600;
+    line-height: 1.5;
+}
+#brief span:nth-child(2) {
+    position: absolute;
+    align-self: flex-start;
+    margin: auto;
+    width: 50%;
+    font-size: clamp(1rem, 3vh, 3rem);
+    font-weight: 600;
+    bottom: 2vh;
+    left: 5vh;
+}
+#brief div {
+    position: absolute;
+    width: 15vh;
+    height: 15vh;
+    right: 2vh;
+    bottom: 2vh;
+    background-blend-mode: lighten;
+}
+#brief div img {
+    width: 100%;
+    border-radius: 3vh;
+}
+
+#doc {
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    max-height: 50vh;
+    overflow: hidden;
+}
+#doc fieldset {
+    width: 100%;
+    border: none;
+}
+#doc div {
+    display: flex;
+}
+fieldset {
+    position: relative;
+    max-width: 100%;
+    margin-top: 2vh;
+    max-height: 30vh;
+    background: transparent ;
+    overflow: hidden;
+}
+fieldset div {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+fieldset div div {
+    width: 100%;
+    overflow: hidden;
+}
+.docImage {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    z-index: -2;
+}
+#fieldbg {
+    position: absolute;
+    right: -3vh;
+    top: -20vh;
+    width: 200%;
+    height: 500%;
+    background: black;
+    z-index: -7;
+}
+summary {
+  border-top: 3px solid #ff9600;
+  border-bottom: 1vh solid #ff9600;
+  align-items: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  padding: 1vh;
+  font-family: 'Times New Roman', Times, serif;
+}
+pre {
+  text-align: center;
+  overflow: auto;
+  max-height: 50vh;
+}
+.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  max-width: 100%;
+  gap: 5vh;
+}
+#images img {
+  width: 100%;
+}
+svg {
+  fill: white;
+  width: 5vh;
+  display: flex;
+}
+/* Example for the Kings font */
+@font-face {
+    font-family: 'KingsCustom'; 
+    src: url('../Font/Kings/Kings-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Example for Mea Culpa */
+@font-face {
+    font-family: 'MeaCulpaCustom';
+    src: url('../Font/Mea_Culpa/MeaCulpa-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MetamorphCustom';
+  src: url('../Font/Metamorphous/../Font/Metamorphous/Metamorphous-Regular.ttf');
+}

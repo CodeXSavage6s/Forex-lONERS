@@ -22,7 +22,6 @@ body {
     background-attachment: fixed;
     background-size: 150%;
     animation: gradientMove 10s ease infinite;
-    font-family: ;
 }
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
@@ -53,7 +52,6 @@ header {
   overflow: hidden;
   font-family: KingsCustom;
 }
-
 #logo::before {
   content: "";
   position: absolute;
@@ -70,7 +68,6 @@ header {
   
   animation: borderSlide 3s ease-in-out infinite;
 }
-
 @keyframes borderSlide {
   0% {
     transform: translateX(0);
@@ -83,6 +80,24 @@ header {
   100% {
     transform: translateX(0);
   }
+}
+#logo span::after {
+  content: "Forex lONERS ";
+  animation: type1 .8s ease alternate;
+}
+@keyframes type1 {
+  0% {content: 'F';}
+  10% {content: 'Fo';}
+  20% {content: 'For';}
+  30% {content: 'Fore';}
+  40% {content: 'Forex ';}
+  50% {content: 'Forex l';}
+  60% {content: 'Forex lO';}
+  70% {content: 'Forex lON';}
+  80% {content: 'Forex lONE';}
+  90% {content: 'Forex lONER';}
+  100% {content: 'Forex lONERS';}
+  
 }
 #logo img {
     height: 100%;
@@ -98,7 +113,6 @@ header {
   background: #111;
   font-family: PlayfairCustomItalic;
 }
-
 #brief::before {
   content: "";
   position: absolute;
@@ -111,8 +125,6 @@ header {
   animation: rotate 4s linear infinite;
   z-index: 1;
 }
-
-
 #brief::after {
   content: "";
   position: absolute;
@@ -121,17 +133,14 @@ header {
   z-index: 2;
   border-radius: 1.5vh;
 }
-
 @keyframes rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
 #brief > * {
   position: relative;
   z-index: 3;
 }
-
 #brief span:nth-child(1) {
     position: absolute;
     align-self: flex-start;
@@ -162,8 +171,13 @@ header {
 #brief div img {
     width: 100%;
     border-radius: 3vh;
+    animation: bounce 3s ease infinite;
 }
-
+@keyframes bounce {
+  0% {transform: translateY(1vh);}
+  50% {transform: translateY(0);}
+  100% {transform: translateY(1vh);}
+}
 #doc {
     display: flex;
     width: 100%;
@@ -223,6 +237,7 @@ pre {
   text-align: center;
   overflow: auto;
   max-height: 50vh;
+  font-family: PlayfairCustomitalic;
 }
 .images {
   display: grid;
@@ -238,15 +253,12 @@ svg {
   width: 5vh;
   display: flex;
 }
-/* Example for the Kings font */
 @font-face {
     font-family: 'KingsCustom'; 
     src: url('../Font/Kings/Kings-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-
-/* Example for Mea Culpa */
 @font-face {
     font-family: 'MeaCulpaCustom';
     src: url('../Font/Mea_Culpa/MeaCulpa-Regular.ttf') format('truetype');
@@ -274,4 +286,86 @@ svg {
 @font-face {
   font-family: 'PlaywriteCustom';
   src: url('../Font/Playwrite_NZ_Basic/PlaywriteNZBasic-VariableFont_wght.ttf');
+}
+aside {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  z-index: 100;
+  right: 2vh;
+  top: 7vh;
+  background: hsla(235, 100%, 0%, .8);
+  line-height: 3;
+  padding: 2vh;
+  align-items: center;
+  font-family: PlaywriteCustom;
+  transition: 1s ease;
+}
+#aside {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateX(20px);
+  display: flex; 
+}
+
+#aside.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+a {
+  text-decoration: none;
+  color: #ff9600;
+}
+footer {
+  background: linear-gradient(135deg, #201E1EFC, #060606);
+  min-height: 20vh;
+  width: 100%;
+}
+footer div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  margin: auto;
+  padding-top: 10%;
+}
+footer div div {
+  position: relative;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  background: black;
+  overflow: hidden;
+}
+footer div div::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(
+    transparent,
+    #ff9600,
+    transparent 50%
+  );
+  animation: rotate 4s linear infinite;
+  z-index: 1;
+}
+footer div div::after {
+  content: "";
+  position: absolute;
+  inset: 0.7vh;
+  background: #201E1EFC;
+  z-index: 2;
+  border-radius: 50%;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
 }

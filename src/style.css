@@ -96,6 +96,7 @@ header {
   padding: 2vh;
   overflow: hidden; 
   background: #111;
+  font-family: PlayfairCustomItalic;
 }
 
 #brief::before {
@@ -216,7 +217,7 @@ summary {
   margin-top: 3vh;
   margin-bottom: 3vh;
   padding: 1vh;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: PlayfairCustom;
 }
 pre {
   text-align: center;
@@ -253,4 +254,24 @@ svg {
 @font-face {
   font-family: 'MetamorphCustom';
   src: url('../Font/Metamorphous/../Font/Metamorphous/Metamorphous-Regular.ttf');
+}
+@font-face {
+  font-family: 'PacificoCustom';
+  src: url('../Font/Pacifico/Pacifico-Regular.ttf')
+}
+@font-face {
+  font-family: 'MacondoCustom';
+  src: url('../Font/Macondo/Macondo-Regular.ttf');
+}
+@font-face {
+  font-family: 'PlayfairCustomItalic';
+  src: url('../Font/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: 'PlayfairCustom';
+  src: url('../Font/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: 'PlaywriteCustom';
+  src: url('../Font/Playwrite_NZ_Basic/PlaywriteNZBasic-VariableFont_wght.ttf');
 }

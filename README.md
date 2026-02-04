@@ -28,7 +28,9 @@
 
 #### I’m here to improve every single day.
 
-If you’re on a similar path — welcome once again.
+#### If you’re on a similar path - 
+#### welcome once again.
 
-We trade alone, but grow together 💪.
+#### We trade alone, 
+#### but grow together 💪.
 [Join](https://forex-loners.vercel.app/)

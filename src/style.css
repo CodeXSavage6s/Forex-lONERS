@@ -415,3 +415,6 @@ footer div div svg {
   opacity: 1;
   transform: translateY(0);
 }
+.reveal:hover, img:hover {
+  transform: translateY(-1vh);
+}

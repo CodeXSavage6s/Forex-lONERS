@@ -31,4 +31,4 @@
 If you’re on a similar path — welcome once again.
 
 We trade alone, but grow together 💪.
-["Join"]("https://forex-loners.vercel.app/")
+[Join](https://forex-loners.vercel.app/)

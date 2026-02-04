@@ -392,8 +392,8 @@ footer div div::after {
 footer div div svg {
   position: relative;
   z-index: 5;
-  width: 50%;
-  height: 50%;
+  width: 80%;
+  height: 80%;
   fill: white;
   display: block;
 }

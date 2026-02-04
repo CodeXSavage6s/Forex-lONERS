@@ -59,5 +59,5 @@ window.addEventListener("load", () => {
             background: 'black',
             color: '#ff9600'
           })
-    }, 2000)
+    }, )
 })

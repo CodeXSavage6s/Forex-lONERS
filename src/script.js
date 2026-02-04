@@ -45,3 +45,19 @@ links.forEach(link => {
     }
   });
 });
+const preload = document.getElementById("preloader");
+window.addEventListener("load", () => {
+    setTimeout(() => {preload.style.display = "none";
+        
+        Swal.fire({
+            icon: 'info',
+            title: 'Hi, Welcome 👋 To Forex lONERS',
+            text: 'Trade Alone but Grow Together',
+            confirmButtonText: 'Let’s Go 🚀',
+            iconColor: '#ff9600',
+            confirmButtonColor: '#ff9600',
+            background: 'black',
+            color: '#ff9600'
+          })
+    }, 2000)
+})

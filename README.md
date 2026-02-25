@@ -33,4 +33,4 @@
 
 #### We trade alone, 
 #### but grow together 💪.
-[Join](https://forex-loners.vercel.app/)
+ _[Join](https://forex-loners.vercel.app/)_

@@ -46,7 +46,7 @@ header {
   justify-content: space-between;
   gap: 1vh;
   padding: 1vh;
-  font-size: clamp(2rem, 3vh, 4rem);
+  font-size: clamp(1rem, 3vh, 4rem);
   background: black;
   border-radius: 2vh;
   overflow: hidden;
@@ -146,7 +146,7 @@ header {
     align-self: flex-start;
     margin: auto;
     width: 50%;
-    font-size: clamp(1rem, 2vh, 2rem);
+    font-size: clamp(0rem, 2vh, 2rem);
     font-weight: 600;
     line-height: 1.5;
 }

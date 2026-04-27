@@ -175,5 +175,17 @@ We trade alone, but grow together 💪.</pre>
   <script src="./src/script.js"></script>
   <script type="text/babel" src="
   /src/react.jsx"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+    try {
+      window.addEventListener('load', async () => {
+        const registration = await navigator.serviceWorker.register('./sw.js')
+        console.log("service worker registered successfully ", registration.scope)
+      })
+    } catch (err) {
+      console.error("registration failed", err)
+    }
+    }
+  </script>
 </body>
 </html>

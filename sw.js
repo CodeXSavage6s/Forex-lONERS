@@ -8,7 +8,9 @@ self.addEventListener('install', (event) => {
      '/',
      '/index.html',
      '/src/style.css',
-     'src/script.js'
+     '/src/script.js',
+     '/font',
+     '/Media'
     ])
     self.skipWaiting()
     console.log('Cached Successful', cache)

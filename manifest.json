@@ -1,0 +1,8 @@
+{
+  "short_name": "FOREX lONERS",
+  "name": "FOREX lONERS web",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "theme_color": "#001aff",
+  "background_color": "#11122d"
+}
